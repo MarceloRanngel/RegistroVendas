@@ -9,6 +9,9 @@ import java.sql.Date;
  */
 public class Vendas {
     String numeroNota;
+
+    public Vendas() {
+    }
     Date data;
     String cliente;
     int valorDesconto;

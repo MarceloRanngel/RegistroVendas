@@ -8,8 +8,10 @@ package view;
 
 import classes.bean.Clientes;
 import classes.bean.Produtos;
+import classes.bean.Vendas;
 import classes.dao.ClientesDAO;
 import classes.dao.ProdutosDAO;
+import classes.dao.VendasDAO;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -152,24 +154,20 @@ public class CadastroVendas extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(formattedCPFCliente)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(buttonOK))
-                            .addComponent(txtNomeCliente)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(9, 382, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel9))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
+                        .addComponent(formattedCPFCliente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(buttonOK))
+                    .addComponent(txtNomeCliente)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(9, 382, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(dateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9)
+                            .addComponent(dateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -310,6 +308,11 @@ public class CadastroVendas extends javax.swing.JPanel {
         jLabel6.setText("Forma de Pagamento");
 
         buttonSalvar.setText("Salvar");
+        buttonSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSalvarActionPerformed(evt);
+            }
+        });
 
         buttonExcluir.setText("Excluir Item");
         buttonExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -444,6 +447,18 @@ public class CadastroVendas extends javax.swing.JPanel {
         
         
     }//GEN-LAST:event_buttonAddProdutoActionPerformed
+
+    private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarActionPerformed
+        Vendas v = new Vendas();
+        VendasDAO vdao = new VendasDAO();
+        
+        v.setCliente(formattedCPFCliente.getText().replaceAll("[.-]", ""));
+        v.setFormaPagamento(comboPagamento.getSelectedItem().toString());
+        v.setValorDesconto(Integer.parseInt(txtDesconto.getText()));
+        v.setValorTotal(Integer.parseInt(txtValorTotal.getText()));
+        vdao.salvar(v);
+                
+    }//GEN-LAST:event_buttonSalvarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

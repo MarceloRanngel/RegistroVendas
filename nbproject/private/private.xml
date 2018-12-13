@@ -3,14 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/view/CadastroVendas.java</file>
+            <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/classes/mathematics/Matematicos.java</file>
             <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/classes/connection/Conexao.java</file>
+            <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/classes/dao/ClientesDAO.java</file>
+            <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/view/Quantidade_vendas.java</file>
             <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/main/TelaPrincipal.java</file>
             <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/view/CadastroProdutos.java</file>
             <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/classes/bean/Clientes.java</file>
-            <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/view/ImportCSV.java</file>
-            <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/classes/bean/Vendas.java</file>
-            <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/classes/bean/Produtos.java</file>
+            <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/classes/mathematics/QuantidadeDeVendas.java</file>
+            <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/classes/dao/MathDAO.java</file>
             <file>file:/C:/Users/marce/Downloads/Projeto_Integrador%20(1)/Projeto_Integrador/src/classes/dao/ProdutosDAO.java</file>
         </group>
     </open-files>

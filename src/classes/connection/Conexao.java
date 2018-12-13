@@ -21,7 +21,7 @@ public class Conexao {
      public static java.sql.Connection getConnection(){
         try {
             Class.forName("org.postgresql.Driver");
-            return DriverManager.getConnection("jdbc:postgresql://localhost:5433/ProjetoIntegrador", "postgres", "917300");
+            return DriverManager.getConnection("jdbc:postgresql://localhost:5433/ProjetoIntegrador1", "postgres", "917300");
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null, ex);
             Component janela = null;

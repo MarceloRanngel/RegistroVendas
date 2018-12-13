@@ -276,7 +276,7 @@ public void readJTable() {
     }// </editor-fold>//GEN-END:initComponents
 
     private void comboUnidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboUnidadeActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_comboUnidadeActionPerformed
 
     private void buttonSalvarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarProdutoActionPerformed
